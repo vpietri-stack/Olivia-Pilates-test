@@ -1,0 +1,6 @@
+{
+  "name": "普拉提理论知识测试",
+  "description": "普拉提理论知识在线测试，包含单选题、判断题及配对题，总分100分，限时1小时。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

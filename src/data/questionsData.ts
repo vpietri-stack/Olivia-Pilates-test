@@ -3,7 +3,7 @@ import { MCQuestion, TFQuestion, MatchingRound } from '../types';
 export const MC_QUESTIONS: MCQuestion[] = [
   {
     id: 1,
-    question: "1、肩胛骨的后缩动作主要由以下哪些肌肉完成？",
+    question: "肩胛骨的后缩动作主要由以下哪些肌肉完成？",
     options: [
       { key: "A", text: "前锯肌 + 胸小肌" },
       { key: "B", text: "菱形肌 + 斜方肌中束" },
@@ -14,7 +14,7 @@ export const MC_QUESTIONS: MCQuestion[] = [
   },
   {
     id: 2,
-    question: "2、以下哪块肌肉起点为“第 7-12 肋软骨内面、胸腰筋膜、髂嵴前部”止于“腹白线”？",
+    question: "以下哪块肌肉起点为“第 7-12 肋软骨内面、胸腰筋膜、髂嵴前部”止于“腹白线”？",
     options: [
       { key: "A", text: "腹横肌" },
       { key: "B", text: "腹内斜肌" },
@@ -25,7 +25,7 @@ export const MC_QUESTIONS: MCQuestion[] = [
   },
   {
     id: 3,
-    question: "3、腹部四层肌肉由内至外包函：",
+    question: "腹部四层肌肉由内至外包函：",
     options: [
       { key: "A", text: "腹横肌、盆底肌、多裂肌、腹直肌" },
       { key: "B", text: "腹横肌、腹内斜肌、腹外斜肌、腹直肌" },
@@ -36,7 +36,7 @@ export const MC_QUESTIONS: MCQuestion[] = [
   },
   {
     id: 4,
-    question: "4、 髋关节外旋 6 兄弟是以下哪一组肌肉：",
+    question: "髋关节外旋 6 兄弟是以下哪一组肌肉：",
     options: [
       { key: "A", text: "臀大肌、股方肌、闭孔内肌、闭孔外肌、上孖肌、下孖肌" },
       { key: "B", text: "梨状肌、股方肌、闭孔内肌、闭孔外肌、上孖肌、下孖肌" },
@@ -47,7 +47,7 @@ export const MC_QUESTIONS: MCQuestion[] = [
   },
   {
     id: 5,
-    question: "5、以下哪个呼吸模式最常用于激活核心和维持腰椎、骨盆稳定性？",
+    question: "以下哪个呼吸模式最常用于激活核心和维持腰椎、骨盆稳定性？",
     options: [
       { key: "A", text: "三维呼吸" },
       { key: "B", text: "腹式呼吸" },
@@ -58,7 +58,7 @@ export const MC_QUESTIONS: MCQuestion[] = [
   },
   {
     id: 6,
-    question: "6、 “闭链运动”的定义是：",
+    question: "“闭链运动”的定义是：",
     options: [
       { key: "A", text: "肢体远端自由移动" },
       { key: "B", text: "肢体远端固定，近端移动" },
@@ -69,7 +69,7 @@ export const MC_QUESTIONS: MCQuestion[] = [
   },
   {
     id: 7,
-    question: "7、在“骨盆后倾”姿势下，以下哪项描述是正确的？",
+    question: "在“骨盆后倾”姿势下，以下哪项描述是正确的？",
     options: [
       { key: "A", text: "增加腰椎前凸弧度" },
       { key: "B", text: "腰椎空隙增大" },
@@ -80,7 +80,7 @@ export const MC_QUESTIONS: MCQuestion[] = [
   },
   {
     id: 8,
-    question: "8、离心收缩的特点是：",
+    question: "离心收缩的特点是：",
     options: [
       { key: "A", text: "肌肉长度缩短，产生力量" },
       { key: "B", text: "肌肉长度不变，保持张力" },
@@ -91,7 +91,7 @@ export const MC_QUESTIONS: MCQuestion[] = [
   },
   {
     id: 9,
-    question: "9、肩胛骨在稳定动作中最核心的设定姿势是：",
+    question: "肩胛骨在稳定动作中最核心的设定姿势是：",
     options: [
       { key: "A", text: "上提并前伸" },
       { key: "B", text: "压低并轻微后缩" },
@@ -102,7 +102,7 @@ export const MC_QUESTIONS: MCQuestion[] = [
   },
   {
     id: 10,
-    question: "10、膈肌的主要功能是：",
+    question: "膈肌的主要功能是：",
     options: [
       { key: "A", text: "辅助肋骨外展" },
       { key: "B", text: "主导吸气，收缩时圆顶下降" },
@@ -113,7 +113,7 @@ export const MC_QUESTIONS: MCQuestion[] = [
   },
   {
     id: 11,
-    question: "11、在动作中“肋骨外翻”通常意味着：",
+    question: "在动作中“肋骨外翻”通常意味着：",
     options: [
       { key: "A", text: "膈肌有效工作" },
       { key: "B", text: "核心力量增强的表现" },
@@ -124,7 +124,7 @@ export const MC_QUESTIONS: MCQuestion[] = [
   },
   {
     id: 12,
-    question: "12、“头颈与脊柱中立位”主要指在什么状态下？",
+    question: "“头颈与脊柱中立位”主要指在什么状态下？",
     options: [
       { key: "A", text: "颈椎最大伸展位" },
       { key: "B", text: "下颌紧贴胸骨" },
@@ -135,7 +135,7 @@ export const MC_QUESTIONS: MCQuestion[] = [
   },
   {
     id: 13,
-    question: "13、进行“胸部展开-坐姿手臂系列”时，握把拉到最大幅度时，肩胛骨应处于什么状态？",
+    question: "进行“后划系列-飞翔”时，握把拉到最大幅度时，肩胛骨应处于什么状态？",
     options: [
       { key: "A", text: "最大程度后缩并保持" },
       { key: "B", text: "轻微后缩，不锁死" },
@@ -146,10 +146,10 @@ export const MC_QUESTIONS: MCQuestion[] = [
   },
   {
     id: 14,
-    question: "14、“腰椎下沉”通常是指：",
+    question: "“腰椎下沉”通常是指：",
     options: [
       { key: "A", text: "将脚掌放在脚踏杆上" },
-      { key: "B", text: "腰椎从后倾过度到中立位的相对扁平状态" },
+      { key: "B", text: "腰椎从中立位过度到微后倾的相对扁平状态" },
       { key: "C", text: "大幅拱起背部" },
       { key: "D", text: "将头部用力压向垫子" }
     ],
@@ -157,7 +157,7 @@ export const MC_QUESTIONS: MCQuestion[] = [
   },
   {
     id: 15,
-    question: "15、“1/2 根弹簧”的张力通常是指",
+    question: "“1/2 根弹簧”的张力通常是指",
     options: [
       { key: "A", text: "100%" },
       { key: "B", text: "125%" },
@@ -168,7 +168,7 @@ export const MC_QUESTIONS: MCQuestion[] = [
   },
   {
     id: 16,
-    question: "16、在进行“骨盆卷动”时，从卷起至最高点的过程中，脊柱的运动顺序是：",
+    question: "在进行“骨盆卷动”时，从卷起至最高点的过程中，脊柱的运动顺序是：",
     options: [
       { key: "A", text: "逐节离地，从尾骨开始卷起" },
       { key: "B", text: "逐节离地，从头颈开始卷起" },
@@ -179,7 +179,7 @@ export const MC_QUESTIONS: MCQuestion[] = [
   },
   {
     id: 17,
-    question: "17、当骨盆不动，胸廓右回旋时启动哪组肌肉？",
+    question: "当骨盆不动，胸廓右回旋时启动哪组肌肉？",
     options: [
       { key: "A", text: "右侧腹内斜、左侧腹外斜" },
       { key: "B", text: "右侧腹内斜、右侧腹外斜" },
@@ -190,7 +190,7 @@ export const MC_QUESTIONS: MCQuestion[] = [
   },
   {
     id: 18,
-    question: "18、做“百次拍击”时，以下哪项是核心稳定失效的标志？",
+    question: "做“百次拍击”时，以下哪项是核心稳定失效的标志？",
     options: [
       { key: "A", text: "下背部轻轻贴住垫子" },
       { key: "B", text: "头部轻微抬起" },
@@ -201,7 +201,7 @@ export const MC_QUESTIONS: MCQuestion[] = [
   },
   {
     id: 19,
-    question: "19、 普拉提五项基本原则中，哪一项被视作“一切动作的前提和基础”？",
+    question: "普拉提五项基本原则中，哪一项被视作“一切动作的前提和基础”？",
     options: [
       { key: "A", text: "肩胛骨稳定" },
       { key: "B", text: "头颈位置" },
@@ -212,7 +212,7 @@ export const MC_QUESTIONS: MCQuestion[] = [
   },
   {
     id: 20,
-    question: "20、做“V 字脚部练习”时，如果学员膝盖伸直时锁死，你应该：",
+    question: "做“脚部练习”时，如果学员膝盖伸直时锁死，你应该：",
     options: [
       { key: "A", text: "鼓励他继续，因为锁死更稳定" },
       { key: "B", text: "提示“微屈膝盖，找到股四头肌均衡发力”" },
@@ -223,7 +223,7 @@ export const MC_QUESTIONS: MCQuestion[] = [
   },
   {
     id: 21,
-    question: "21、“百次拍击”的呼吸节奏是：",
+    question: "“百次拍击”的呼吸节奏是：",
     options: [
       { key: "A", text: "吸气 5 次，呼气 5 次，做 10 组" },
       { key: "B", text: "吸气 10 次，呼气 10 次，做 10 组" },
@@ -234,7 +234,7 @@ export const MC_QUESTIONS: MCQuestion[] = [
   },
   {
     id: 22,
-    question: "22、关于“动作编排”的进阶顺序，正确的原则是：",
+    question: "关于“动作编排”的进阶顺序，正确的原则是：",
     options: [
       { key: "A", text: "从不稳定到稳定" },
       { key: "B", text: "从开链到闭链" },
@@ -245,7 +245,7 @@ export const MC_QUESTIONS: MCQuestion[] = [
   },
   {
     id: 23,
-    question: "23、在侧卧腿部练习中，如果学员抬腿时骨盆向后滚动，最重要的原因是：",
+    question: "在侧卧腿部练习中，如果学员抬腿时骨盆向后滚动，最重要的原因是：",
     options: [
       { key: "A", text: "髋外展肌无力，代偿用臀大肌后伸" },
       { key: "B", text: "腹横肌和髋内收肌未协同稳定" },
@@ -256,7 +256,7 @@ export const MC_QUESTIONS: MCQuestion[] = [
   },
   {
     id: 24,
-    question: "24、在闭链动作中，肩胛骨的稳定主要依赖：",
+    question: "在闭链动作中，肩胛骨的稳定主要依赖：",
     options: [
       { key: "A", text: "仅靠关节锁死" },
       { key: "B", text: "胸小肌的强力收缩" },
@@ -267,7 +267,7 @@ export const MC_QUESTIONS: MCQuestion[] = [
   },
   {
     id: 25,
-    question: "25、腿部外旋在普拉提动作中的主要目的是：",
+    question: "腿部外旋在普拉提动作中的主要目的是：",
     options: [
       { key: "A", text: "增加动作幅度" },
       { key: "B", text: "激活臀中肌和深层外旋肌以稳定髋关节" },
@@ -278,7 +278,7 @@ export const MC_QUESTIONS: MCQuestion[] = [
   },
   {
     id: 26,
-    question: "26、深层核心肌群包括：",
+    question: "深层核心肌群包括：",
     options: [
       { key: "A", text: "腹横肌、盆底肌、多裂肌、膈肌" },
       { key: "B", text: "腹横肌、盆底肌、腹内斜肌、膈肌" },
@@ -289,7 +289,7 @@ export const MC_QUESTIONS: MCQuestion[] = [
   },
   {
     id: 27,
-    question: "27、进行“单腿伸展”时，非支撑腿在下放过程中应避免：",
+    question: "进行“单腿伸展”时，非支撑腿在下放过程中应避免：",
     options: [
       { key: "A", text: "保持骨盆水平" },
       { key: "B", text: "核心持续收缩" },
@@ -300,7 +300,7 @@ export const MC_QUESTIONS: MCQuestion[] = [
   },
   {
     id: 28,
-    question: "28、股四头肌包括：",
+    question: "股四头肌包括：",
     options: [
       { key: "A", text: "股直肌、股薄肌、缝匠肌、膕肌" },
       { key: "B", text: "股直肌、股薄肌、股中间肌、股二头肌" },
@@ -311,7 +311,7 @@ export const MC_QUESTIONS: MCQuestion[] = [
   },
   {
     id: 29,
-    question: "29、膕绳肌包括：",
+    question: "膕绳肌包括：",
     options: [
       { key: "A", text: "膕肌、跖肌、股二头肌" },
       { key: "B", text: "膕肌、半腱肌、半膜肌" },
@@ -322,7 +322,7 @@ export const MC_QUESTIONS: MCQuestion[] = [
   },
   {
     id: 30,
-    question: "30、在脊柱右侧屈动作中启动了哪组肌肉？",
+    question: "在脊柱右侧屈动作中启动了哪组肌肉？",
     options: [
       { key: "A", text: "右侧腹内斜、右侧腹外斜" },
       { key: "B", text: "右侧腹内斜、左侧腹外斜" },
@@ -336,52 +336,52 @@ export const MC_QUESTIONS: MCQuestion[] = [
 export const TF_QUESTIONS: TFQuestion[] = [
   {
     id: 1,
-    question: "1、起始位置只需要在课程中第一个动作前说明一次",
+    question: "起始位置只需要在课程中第一个动作前说明一次",
     answer: false
   },
   {
     id: 2,
-    question: "2、腹横肌与腰方肌共同作用完成脊柱侧屈运动",
+    question: "腹横肌与腰方肌共同作用完成脊柱侧屈运动",
     answer: false
   },
   {
     id: 3,
-    question: "3、对于圆肩体态，应多强调肩胛骨后缩下沉的训练。",
+    question: "对于圆肩体态，应多强调肩胛骨后缩下沉的训练。",
     answer: true
   },
   {
     id: 4,
-    question: "4、做“骨盆卷动”时，卷至最高点应保持肩到膝成一条线，避免过度伸展",
+    question: "做“骨盆卷动”时，卷至最高点应保持肩到膝成一条线，避免过度伸展",
     answer: true
   },
   {
     id: 5,
-    question: "5、肩胛骨的上回旋需要前锯肌和斜方肌上/下束协同完成。",
+    question: "肩胛骨的上回旋需要前锯肌和斜方肌上/下束协同完成。",
     answer: true
   },
   {
     id: 6,
-    question: "6、骨盆后倾会导致腰椎的生理前凸曲度增加。",
+    question: "骨盆后倾会导致腰椎的生理前凸曲度增加。",
     answer: false
   },
   {
     id: 7,
-    question: "7、拉伸应该在充分热身之后进行",
+    question: "拉伸应该在充分热身之后进行",
     answer: true
   },
   {
     id: 8,
-    question: "8、在同一次练习中，应该先做开链再做闭链",
+    question: "在同一次练习中，应该先做开链再做闭链",
     answer: false
   },
   {
     id: 9,
-    question: "9、普拉提所有动作应该在骨盆中立位完成，从不使用后倾位",
+    question: "普拉提所有动作应该在骨盆中立位完成，从不使用后倾位",
     answer: false
   },
   {
     id: 10,
-    question: "10、内收肌群在所有下肢动作中都应保持放松，以免干扰骨盆稳定。",
+    question: "内收肌群在所有下肢动作中都应保持放松，以免干扰骨盆稳定。",
     answer: false
   }
 ];
@@ -389,21 +389,21 @@ export const TF_QUESTIONS: TFQuestion[] = [
 export const MATCHING_ROUNDS: MatchingRound[] = [
   {
     id: 1,
-    title: "第一题：将左侧肌肉与右侧功能配对，将字母写在横线后方",
+    title: "第一题：将肌肉与功能配对",
     leftItems: [
-      { id: "1", text: "1、腹横肌" },
-      { id: "2", text: "2、股直肌" },
-      { id: "3", text: "3、前锯肌" },
-      { id: "4", text: "4、肱三头肌" },
-      { id: "5", text: "5、肩胛提肌" }
+      { id: "1", text: "腹横肌" },
+      { id: "2", text: "股直肌" },
+      { id: "3", text: "前锯肌" },
+      { id: "4", text: "肱三头肌" },
+      { id: "5", text: "肩胛提肌" }
     ],
     rightOptions: [
-      { id: "A", text: "A、肩胛骨前引" },
-      { id: "B", text: "B、肘关节伸展" },
-      { id: "C", text: "C、髋关节屈曲" },
-      { id: "D", text: "D、增加腹内压，稳定腰椎" },
-      { id: "E", text: "E、肩胛骨上提" },
-      { id: "F", text: "F、肘关节屈曲" }
+      { id: "A", text: "肩胛骨前引" },
+      { id: "B", text: "肘关节伸展" },
+      { id: "C", text: "髋关节屈曲" },
+      { id: "D", text: "增加腹内压，稳定腰椎" },
+      { id: "E", text: "肩胛骨上提" },
+      { id: "F", text: "肘关节屈曲" }
     ],
     correctMap: {
       "1": "D",
@@ -416,21 +416,21 @@ export const MATCHING_ROUNDS: MatchingRound[] = [
   },
   {
     id: 2,
-    title: "第二题：将左侧动作与右侧训练目标配对，将字母写在横线后方",
+    title: "第二题：将动作与训练目标配对",
     leftItems: [
-      { id: "1", text: "1、滑雪" },
-      { id: "2", text: "2、短盒子直背" },
-      { id: "3", text: "3、百次拍击" },
-      { id: "4", text: "4、长盒子划船" },
-      { id: "5", text: "5、敬礼" }
+      { id: "1", text: "滑雪" },
+      { id: "2", text: "短盒子直背" },
+      { id: "3", text: "百次拍击" },
+      { id: "4", text: "长盒子划船" },
+      { id: "5", text: "敬礼" }
     ],
     rightOptions: [
-      { id: "A", text: "A、髋关节屈曲肌群向心收缩、腹直肌等长收缩" },
-      { id: "B", text: "B、腹肌耐力、肩胛稳定" },
-      { id: "C", text: "C、髋关节外展、内收肌群" },
-      { id: "D", text: "D、肱三头肌及肩胛稳定肌群" },
-      { id: "E", text: "E、髋关节屈曲肌群等长收缩、腹直肌向心收缩" },
-      { id: "F", text: "F、竖脊肌群" }
+      { id: "A", text: "髋关节屈曲肌群向心收缩、腹直肌等长收缩" },
+      { id: "B", text: "腹肌耐力、肩胛稳定" },
+      { id: "C", text: "髋关节外展、内收肌群" },
+      { id: "D", text: "肱三头肌及肩胛稳定肌群" },
+      { id: "E", text: "髋关节屈曲肌群等长收缩、腹直肌向心收缩" },
+      { id: "F", text: "竖脊肌群" }
     ],
     correctMap: {
       "1": "C",
@@ -442,3 +442,4 @@ export const MATCHING_ROUNDS: MatchingRound[] = [
     redHerringId: "E"
   }
 ];
+

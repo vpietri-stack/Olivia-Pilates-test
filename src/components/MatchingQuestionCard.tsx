@@ -103,7 +103,10 @@ export const MatchingQuestionCard: React.FC<MatchingQuestionCardProps> = ({
                     : 'bg-white border-slate-200 text-slate-700'
                 }`}
               >
-                <span className="leading-snug">{opt.text}</span>
+                <span className="leading-snug font-medium">
+                  <span className="font-bold text-blue-700 mr-1.5">{opt.id}、</span>
+                  {opt.text}
+                </span>
                 {isAssigned ? (
                   <span className="text-[10px] bg-blue-600 text-white px-2 py-0.5 rounded-full font-bold shrink-0">
                     已配对项目 {assignedLeftId}
@@ -140,7 +143,7 @@ export const MatchingQuestionCard: React.FC<MatchingQuestionCardProps> = ({
             >
               <div className="flex items-center justify-between mb-2">
                 <span className="text-sm font-bold text-slate-900">
-                  {item.text}
+                  {item.id}、 {item.text}
                 </span>
                 {currentSelectedRightId ? (
                   <span className="text-xs bg-blue-600 text-white px-2 py-0.5 rounded-md font-bold">

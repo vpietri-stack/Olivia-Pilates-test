@@ -93,6 +93,10 @@ export const ResultScreen: React.FC<ResultScreenProps> = ({
               <Clock className="w-3.5 h-3.5 text-slate-400" />
               <span>用时：<b>{formatSeconds(result.timeSpentSeconds)}</b></span>
             </div>
+            <div className="flex items-center gap-1.5 justify-center col-span-2 pt-2 border-t border-slate-200/60 text-slate-600">
+              <RotateCcw className="w-3.5 h-3.5 text-amber-500 shrink-0" />
+              <span>本设备开启次数：<b className={result.attemptCount && result.attemptCount > 1 ? 'text-amber-600 font-bold' : 'text-slate-800'}>第 {result.attemptCount || 1} 次开启</b></span>
+            </div>
           </div>
         </motion.div>
 
@@ -156,7 +160,7 @@ export const ResultScreen: React.FC<ResultScreenProps> = ({
                 一、单项选择题核对（30 题）
               </h4>
               <div className="space-y-3">
-                {mcQuestions.map((q) => {
+                {mcQuestions.map((q, idx) => {
                   const userAns = answers.mc[q.id];
                   const isRight = userAns === q.answer;
 
@@ -168,7 +172,7 @@ export const ResultScreen: React.FC<ResultScreenProps> = ({
                       }`}
                     >
                       <div className="flex items-start justify-between gap-2 font-bold text-slate-900">
-                        <span>{q.question}</span>
+                        <span>{idx + 1}、 {q.question}</span>
                         {isRight ? (
                           <span className="flex items-center gap-1 text-emerald-600 shrink-0 text-[11px]">
                             <CheckCircle2 className="w-3.5 h-3.5" /> 正确
@@ -204,7 +208,7 @@ export const ResultScreen: React.FC<ResultScreenProps> = ({
                 二、判断题核对（10 题）
               </h4>
               <div className="space-y-3">
-                {tfQuestions.map((q) => {
+                {tfQuestions.map((q, idx) => {
                   const userAns = answers.tf[q.id];
                   const isRight = userAns === q.answer;
 
@@ -216,7 +220,7 @@ export const ResultScreen: React.FC<ResultScreenProps> = ({
                       }`}
                     >
                       <div className="flex items-start justify-between gap-2 font-bold text-slate-900">
-                        <span>{q.question}</span>
+                        <span>{idx + 1}、 {q.question}</span>
                         {isRight ? (
                           <span className="flex items-center gap-1 text-emerald-600 shrink-0 text-[11px]">
                             <CheckCircle2 className="w-3.5 h-3.5" /> 正确
@@ -270,7 +274,7 @@ export const ResultScreen: React.FC<ResultScreenProps> = ({
                             }`}
                           >
                             <div className="flex items-center justify-between font-bold text-slate-900">
-                              <span>{item.text}</span>
+                              <span>{item.id}、 {item.text}</span>
                               {isRight ? (
                                 <span className="text-emerald-600 text-[11px]">✓ 匹配正确</span>
                               ) : (

@@ -26,7 +26,8 @@ export function calculateTestResult(
   timeSpentSeconds: number,
   mcQuestions: MCQuestion[] = MC_QUESTIONS,
   tfQuestions: TFQuestion[] = TF_QUESTIONS,
-  matchingRounds: MatchingRound[] = MATCHING_ROUNDS
+  matchingRounds: MatchingRound[] = MATCHING_ROUNDS,
+  attemptCount: number = 1
 ): TestResult {
   let mcScore = 0;
   mcQuestions.forEach((q) => {
@@ -66,6 +67,7 @@ export function calculateTestResult(
     matchingScore,
     timeSpentSeconds,
     submitTime: submitTimeStr,
+    attemptCount,
     mcQuestions,
     tfQuestions,
     matchingRounds,

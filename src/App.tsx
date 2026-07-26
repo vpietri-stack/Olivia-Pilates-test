@@ -22,6 +22,7 @@ const EXAM_DURATION_SECONDS = 3600; // 1 hour
 export default function App() {
   const [studentName, setStudentName] = useState<string>('');
   const [status, setStatus] = useState<'login' | 'testing' | 'completed'>('login');
+  const [attemptCount, setAttemptCount] = useState<number>(1);
 
   const [mcQuestions, setMcQuestions] = useState<MCQuestion[]>(() => generateRandomizedMCQuestions());
   const [tfQuestions, setTfQuestions] = useState<TFQuestion[]>(() => generateRandomizedTFQuestions());
@@ -51,6 +52,10 @@ export default function App() {
       const savedResult = localStorage.getItem('pilates_exam_last_result');
       if (savedResult) {
         setLastResult(JSON.parse(savedResult));
+      }
+      const savedStarts = localStorage.getItem('pilates_exam_starts_count');
+      if (savedStarts) {
+        setAttemptCount(parseInt(savedStarts, 10) || 1);
       }
     } catch (e) {
       console.error('Failed to load local storage:', e);
@@ -88,6 +93,25 @@ export default function App() {
   // Handle start exam
   const handleStartExam = (name: string) => {
     setStudentName(name);
+
+    // Track total times exam was started on this device
+    let currentStarts = 0;
+    try {
+      const storedStarts = localStorage.getItem('pilates_exam_starts_count');
+      if (storedStarts) {
+        currentStarts = parseInt(storedStarts, 10) || 0;
+      }
+    } catch (e) {
+      console.error(e);
+    }
+    const newStarts = currentStarts + 1;
+    setAttemptCount(newStarts);
+    try {
+      localStorage.setItem('pilates_exam_starts_count', String(newStarts));
+    } catch (e) {
+      console.error(e);
+    }
+
     setMcQuestions(generateRandomizedMCQuestions());
     setTfQuestions(generateRandomizedTFQuestions());
     setMatchingRounds(generateRandomizedMatchingRounds());
@@ -111,7 +135,8 @@ export default function App() {
       EXAM_DURATION_SECONDS,
       mcQuestions,
       tfQuestions,
-      matchingRounds
+      matchingRounds,
+      attemptCount
     );
     setLastResult(res);
     try {
@@ -132,7 +157,8 @@ export default function App() {
       timeSpentSeconds,
       mcQuestions,
       tfQuestions,
-      matchingRounds
+      matchingRounds,
+      attemptCount
     );
     setLastResult(res);
     try {
@@ -324,7 +350,14 @@ export default function App() {
       />
 
       {/* Main Question Card Area */}
-      <main className="flex-1 max-w-md w-full mx-auto p-3 sm:p-4 my-auto">
+      <main className="flex-1 max-w-md w-full mx-auto p-3 sm:p-4 my-auto space-y-3">
+        {attemptCount > 1 && (
+          <div className="bg-amber-50 border border-amber-200/90 text-amber-900 text-xs px-3.5 py-2.5 rounded-xl flex items-center justify-between shadow-2xs">
+            <span>
+              ⚠️ 提示：检测到您在本设备/微信浏览器中第 <b>{attemptCount}</b> 次开启考试（开启次数将被记入成绩单）。
+            </span>
+          </div>
+        )}
         {currentIndex < 30 && mcQuestions[currentIndex] && (
           <MCQuestionCard
             question={mcQuestions[currentIndex]}

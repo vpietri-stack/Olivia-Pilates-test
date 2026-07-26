@@ -57,6 +57,7 @@ export interface TestResult {
   matchingScore: number;
   timeSpentSeconds: number;
   submitTime: string;
+  attemptCount?: number;
   mcQuestions?: MCQuestion[];
   tfQuestions?: TFQuestion[];
   matchingRounds?: MatchingRound[];

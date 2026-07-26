@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { User, Clock, Award, FileText, CheckCircle2, ArrowRight } from 'lucide-react';
+import { User, Clock, Award, FileText, CheckCircle2, ArrowRight, RotateCcw, AlertTriangle } from 'lucide-react';
 import { motion } from 'motion/react';
 
 interface LoginScreenProps {
@@ -15,6 +15,18 @@ export const LoginScreen: React.FC<LoginScreenProps> = ({
 }) => {
   const [name, setName] = useState('');
   const [error, setError] = useState('');
+  const [deviceStartsCount, setDeviceStartsCount] = useState<number>(0);
+
+  React.useEffect(() => {
+    try {
+      const stored = localStorage.getItem('pilates_exam_starts_count');
+      if (stored) {
+        setDeviceStartsCount(parseInt(stored, 10) || 0);
+      }
+    } catch (e) {
+      console.error(e);
+    }
+  }, []);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -141,6 +153,12 @@ export const LoginScreen: React.FC<LoginScreenProps> = ({
                 <p className="text-amber-600 pt-1 font-medium">
                   * 输入姓名后点击“开始考试”，倒计时将立即开启。答题过程中可随时返回检查修改。
                 </p>
+                {deviceStartsCount > 0 && (
+                  <div className="mt-2 p-2.5 bg-amber-50 rounded-lg border border-amber-200/80 text-amber-900 font-medium text-[11px] flex items-center gap-1.5">
+                    <AlertTriangle className="w-4 h-4 text-amber-600 shrink-0" />
+                    <span>提示：本设备已记录 <b>{deviceStartsCount}</b> 次考试开启记录，再次开启将被记为第 <b>{deviceStartsCount + 1}</b> 次开启。</span>
+                  </div>
+                )}
               </div>
             </div>
 

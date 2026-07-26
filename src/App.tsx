@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+import { PasswordScreen } from './components/PasswordScreen';
 import { LoginScreen } from './components/LoginScreen';
 import { ExamHeader } from './components/ExamHeader';
 import { ExamFooter } from './components/ExamFooter';
@@ -20,6 +21,13 @@ import {
 const EXAM_DURATION_SECONDS = 3600; // 1 hour
 
 export default function App() {
+  const [isPasswordVerified, setIsPasswordVerified] = useState<boolean>(() => {
+    try {
+      return sessionStorage.getItem('pilates_exam_pwd_verified') === 'true';
+    } catch {
+      return false;
+    }
+  });
   const [studentName, setStudentName] = useState<string>('');
   const [status, setStatus] = useState<'login' | 'testing' | 'completed'>('login');
   const [attemptCount, setAttemptCount] = useState<number>(1);
@@ -313,6 +321,19 @@ export default function App() {
     if (section === 'tf') setCurrentIndex(30);
     if (section === 'matching') setCurrentIndex(40);
   };
+
+  const handlePasswordSuccess = () => {
+    setIsPasswordVerified(true);
+    try {
+      sessionStorage.setItem('pilates_exam_pwd_verified', 'true');
+    } catch (e) {
+      console.error(e);
+    }
+  };
+
+  if (!isPasswordVerified) {
+    return <PasswordScreen onSuccess={handlePasswordSuccess} />;
+  }
 
   if (status === 'login') {
     return (

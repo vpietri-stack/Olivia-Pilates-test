@@ -14,13 +14,6 @@ export function shuffleArray<T>(array: T[]): T[] {
 }
 
 /**
- * Helper to strip question numbers / letter prefixes (e.g. "22、", "A、", "1.")
- */
-export function stripPrefix(text: string): string {
-  return text.replace(/^([\d一二三四五六七八九十|A-Za-z]+[\s\u3000]*[、\.\,\:\s]*)+/, '').trim();
-}
-
-/**
  * Randomize Exercise 1 (Multiple Choice):
  * - Randomize question order (1-30)
  * - Randomize option order (A-D) for each question
@@ -29,8 +22,6 @@ export function generateRandomizedMCQuestions(questions: MCQuestion[] = MC_QUEST
   const optionKeys: ('A' | 'B' | 'C' | 'D')[] = ['A', 'B', 'C', 'D'];
 
   const processed = questions.map((q) => {
-    const cleanQuestionText = stripPrefix(q.question);
-
     // Find text of correct answer
     const correctText = q.options.find((opt) => opt.key === q.answer)?.text;
 
@@ -41,19 +32,18 @@ export function generateRandomizedMCQuestions(questions: MCQuestion[] = MC_QUEST
     let newAnswerKey: 'A' | 'B' | 'C' | 'D' = 'A';
     const newOptions = shuffledOptions.map((opt, idx) => {
       const key = optionKeys[idx];
-      const cleanOptionText = stripPrefix(opt.text);
-      if (opt.text === correctText || cleanOptionText === stripPrefix(correctText || '')) {
+      if (opt.text === correctText) {
         newAnswerKey = key;
       }
       return {
         key,
-        text: cleanOptionText,
+        text: opt.text,
       };
     });
 
     return {
       ...q,
-      question: cleanQuestionText,
+      question: q.question,
       options: newOptions,
       answer: newAnswerKey,
     };
@@ -68,11 +58,7 @@ export function generateRandomizedMCQuestions(questions: MCQuestion[] = MC_QUEST
  * - Randomize question order (1-10)
  */
 export function generateRandomizedTFQuestions(questions: TFQuestion[] = TF_QUESTIONS): TFQuestion[] {
-  const processed = questions.map((q) => ({
-    ...q,
-    question: stripPrefix(q.question),
-  }));
-  return shuffleArray(processed);
+  return shuffleArray(questions);
 }
 
 /**
@@ -84,11 +70,6 @@ export function generateRandomizedMatchingRounds(rounds: MatchingRound[] = MATCH
   const optionKeys = ['A', 'B', 'C', 'D', 'E', 'F'];
 
   return rounds.map((round) => {
-    const cleanLeftItems = round.leftItems.map((item) => ({
-      ...item,
-      text: stripPrefix(item.text),
-    }));
-
     // Shuffle right options
     const shuffledRightOptions = shuffleArray(round.rightOptions);
 
@@ -99,7 +80,7 @@ export function generateRandomizedMatchingRounds(rounds: MatchingRound[] = MATCH
       oldToNewIdMap[opt.id] = newId;
       return {
         id: newId,
-        text: stripPrefix(opt.text),
+        text: opt.text,
       };
     });
 
@@ -114,7 +95,7 @@ export function generateRandomizedMatchingRounds(rounds: MatchingRound[] = MATCH
 
     return {
       ...round,
-      leftItems: cleanLeftItems,
+      leftItems: round.leftItems,
       rightOptions: newRightOptions,
       correctMap: newCorrectMap,
       redHerringId: newRedHerringId,

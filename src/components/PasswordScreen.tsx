@@ -12,7 +12,7 @@ export const PasswordScreen: React.FC<PasswordScreenProps> = ({ onSuccess }) => 
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (password.trim() === '364521') {
+    if (password.trim() === '475632') {
       setError('');
       onSuccess();
     } else {
